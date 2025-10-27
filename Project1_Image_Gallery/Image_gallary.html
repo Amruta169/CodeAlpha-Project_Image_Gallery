@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="galleryOverlay"></div>
+    <div class="imgBox">
+        <!-- close button -->
+        <span class="closeBtn">&times;</span>
+         <!-- previous button -->
+          <button class="prevBtn">&#10094;</button>
+          <!-- main light image -->
+        <img src="" alt="">
+          <!-- Next button -->
+        <button class="nextBtn">&#10095;</button>
+
+    </div>
+
+    <div class="title-bar">Responsive Image Gallery</div>
+     <!-- LightBox -->
+
+    <div class="controls">
+    <div class="category">
+        <label class="category-lab">CATEGORY</label>
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="animal">Animal</button>
+        <button class="filter-btn" data-category="flowers">Flowers</button>
+        <button class="filter-btn" data-category="mountains">Mountain</button>
+    </div>
+    <div class="filter">
+        <label class="filter-lab">Filters</label>
+        <button class="filter-btn active" data-category="all">None</button>
+        <button class="filter-btn" data-category="animal">GrayScale</button>
+        <button class="filter-btn" data-category="flowers">Sepia</button>
+        <button class="filter-btn" data-category="mountains">Slightly Blure</button>
+    </div>
+    </div>
+    <!-- category and filter -->
+    
+    <div class="container" id="gallery">
+        <div class="galleryItem" data-category="animal">
+            <img src="Images/img1.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="mountains">
+            <img src="Images/img10.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="flowers">
+            <img src="Images/img6.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="animal">
+            <img src="Images/img3.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="animal">
+            <img src="Images/img2.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="flowers">
+            <img src="Images/img7.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="flowers">
+            <img src="Images/img8.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="flowers">
+            <img src="Images/img5.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="animal">
+            <img src="Images/img4.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="mountains">
+            <img src="Images/img11.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="mountains">
+            <img src="Images/img12.jpg" alt="" />
+        </div>
+        <div class="galleryItem" data-category="mountains">
+            <img src="Images/img9.jpg" alt="" />
+        </div>
+        <!-- Image gallery -->
+
+    </div>
+</body>
+<script src="Script.js"></script>
+
+</html>

@@ -1,0 +1,250 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    
+}
+body{
+    background-color: #DEF2F1;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.galleryItem{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-basis: 23%;
+    margin: 1%;
+}
+.galleryItem::after{
+    content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
+}
+.galleryItem:hover img{
+    transform: scale(1.08);
+}
+.galleryItem img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+
+}
+.galleryItem img:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+.imgBox {
+    width: 70%;
+    height: 80%;
+    left: 15%;
+    top: 10%;
+    transition: 0.4s ease;
+    transform: scale(0);
+    background-color: white;
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.galleryOverlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.galleryOverlayShow {
+    display: block;
+}
+
+.imgBoxShow {
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .galleryItem {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryItem {
+        flex-basis: 98%;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.category,
+.filter {
+    flex: 1 1 45%;
+    /* each takes about half the width */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-lab,
+.filter-lab {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+
+/* BUTTON STYLES */
+.filter-btn {
+    background-color: #3aafa9;
+    color: #333;
+    border: none;
+    outline: none;
+    padding: 10px 18px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+   
+}
+
+.filter-btn.active {
+    background-color: #2b7a78;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive Button */
+.filter-lab {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category,
+    .filter {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+.prevBtn{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  position: absolute;
+  margin-right: 90%;
+}
+.nextBtn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  position: absolute;
+  margin-left: 90%;
+  
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+.title-bar{
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #205d5b;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    border: none;
+    box-shadow:  #2b7a78;
+}
