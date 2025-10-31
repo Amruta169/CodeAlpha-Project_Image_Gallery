@@ -8,4 +8,4 @@ Features include category filters, image effects, lightbox view, and responsive 
 - JavaScript (ES6)  
 
 ## 🌐 Live Demo
-[View on GitHub Pages](https://github.com/Amruta169/CodeAlpha-Project_Image_Gallery.git)
+[View on GitHub Pages](https://www.linkedin.com/posts/amrutapatil21_codealpha-internship-frontenddevelopment-activity-7388628610544394240-icDb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIC3qQBl9ygxQ1rrtTr4txQiPo91J3Gp4Y)
